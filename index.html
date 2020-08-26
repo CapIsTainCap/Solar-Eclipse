@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <title>
+            A Solar Eclipse With CSS
+        </title>
+        <meta charset="utf-8">
+        <style>
+body {
+  background: #000;
+}
+.sun {
+  position: absolute;
+  background: rgb(255, 255, 0);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin:10% 0% 0% 50%;
+  z-index: 1;
+}
+.moon {
+  animation-name: moonani;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  position: absolute;
+  background: white;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 11% 0% 0% 10%;
+  z-index: 1;
+  left: 0px;
+}
+h1 {
+  color: white;
+  text-align: center;
+  font-family: 'Montserrat';
+}
+@keyframes moonani{
+  0% {
+    left: 0px;
+  }
+  25% {
+    left: 550px;
+    background: #000;
+  }
+  50% {
+    left: 1000px;
+    background: #fff;
+  }
+  75% {
+      left: 550px;
+      background: #000;
+  }
+  100% {
+    left: 0px;
+    background: #fff;
+  }
+}
+        </style>
+    </head>
+    <body>
+        <!--Main Container-->
+    <div class = "main">
+        <div class="text">
+            <h1>
+                Solar Eclipse With CSS
+            </h1>
+        </div>
+        <!--Sun-->
+        <div class="sun">
+        </div>
+        <!--Moon-->
+        <div class="moon"></div>
+        </div>
+    </body>
+</html>
